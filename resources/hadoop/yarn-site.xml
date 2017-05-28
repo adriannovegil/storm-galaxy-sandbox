@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <property>
+        <name>yarn.log-aggregation-enable</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.address</name>
+        <value>10.211.55.101:10020</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.webapp.address</name>
+        <value>10.211.55.101:19888</value>
+    </property>
+    <property>
+        <name>yarn.log.server.url</name>
+        <value>http://10.211.55.101:19888/jobhistory/logs/</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>10.211.55.101</value>
+    </property>
+    <property>
+        <name>yarn.timeline-service.hostname</name>
+        <value>10.211.55.101</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.delete.debug-delay-sec</name>
+        <value>86400</value>
+    </property>
+    <!-- If you're running this example on Java 8, this may be due to Java 8's
+    excessive memory allocation strategy:
+    https://issues.apache.org/jira/browse/YARN-4714
+    You can force YARN to ignore this by setting up the following properties in
+    yarn-site.xml  -->
+    <property>
+        <name>yarn.nodemanager.pmem-check-enabled</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.vmem-check-enabled</name>
+        <value>false</value>
+    </property>
+</configuration>
