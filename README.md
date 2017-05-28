@@ -28,11 +28,11 @@ The virtual machine will be running the following services:
 
 Here are some useful links to navigate to various UI's:
 
- * YARN resource manager:  (http://10.211.55.101:8088)
- * Job history:  (http://10.211.55.101:19888/jobhistory/)
- * HDFS: (http://10.211.55.101:50070/dfshealth.html)
- * Spark history server: (http://10.211.55.101:18080)
- * Spark context UI (if a Spark context is running): (http://10.211.55.101:4040)
+ * YARN resource manager:  (http://10.211.55.102:8088)
+ * Job history:  (http://10.211.55.102:19888/jobhistory/)
+ * HDFS: (http://10.211.55.102:50070/dfshealth.html)
+ * Spark history server: (http://10.211.55.102:18080)
+ * Spark context UI (if a Spark context is running): (http://10.211.55.102:4040)
 
 ## Starting Services in the Event of a System Restart
 

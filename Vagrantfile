@@ -8,13 +8,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         #node.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v6.5.1/centos65-x86_64-20131205.box"
         node.vm.box = "bento/centos-7.2"
         node.vm.provider "virtualbox" do |v|
-          v.name = "node#{i}"
-          #v.customize ["modifyvm", :id, "--memory", "16384"]
-          v.customize ["modifyvm", :id, "--memory", "32768"]
-          v.customize ["modifyvm", :id, "--cpus", "8"]
+          v.name = "storm-galaxy-sandbox"
+          v.customize ["modifyvm", :id, "--memory", "16384"]
+          v.customize ["modifyvm", :id, "--cpus", "4"]
         end
-        node.vm.network :private_network, ip: "10.211.55.101"
-        node.vm.hostname = "10.211.55.101"
+        node.vm.network :private_network, ip: "10.211.55.102"
+        node.vm.hostname = "10.211.55.102"
 
         # Workaround for Centos 7
         # service network restart
@@ -29,7 +28,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         # Base
         node.vm.provision "shell", path: "provision/setup-centos.sh"
         node.vm.provision "shell", path: "provision/setup-java.sh"
-        node.vm.provision "shell", path: "provision/setup-maven.sh"
 
         # SparkBWA
         node.vm.provision "shell", path: "provision/setup-sparkbwa.sh"
